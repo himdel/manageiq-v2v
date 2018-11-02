@@ -7,7 +7,7 @@ class MigrationController < ApplicationController
   def index
     # this sets the active menu item, must match the item name in lib/manageiq-v2v/engine.rb
     @layout = case request.path
-              when '/migration/overview'
+              when '/migration/overview', /^\/migration\/plan\/.*/
                 'overview'
               when '/migration/mappings'
                 'mappings'
