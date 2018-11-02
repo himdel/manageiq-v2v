@@ -61,7 +61,7 @@ class Overview extends React.Component {
     });
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     const {
       isContinuingToPlan,
       fetchTransformationPlansUrl,

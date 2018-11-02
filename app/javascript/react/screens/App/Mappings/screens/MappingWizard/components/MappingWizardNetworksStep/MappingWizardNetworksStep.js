@@ -17,7 +17,7 @@ class MappingWizardNetworksStep extends React.Component {
     preLoadingMappings: false
   };
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     const { clusterMappings, pristine } = this.props;
 
     const sourceClusters = clusterMappings.reduce(
@@ -58,7 +58,7 @@ class MappingWizardNetworksStep extends React.Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     const { showAlertAction, isRejectedSourceNetworks, isRejectedTargetNetworks } = this.props;
 
     const { selectedCluster, selectedClusterMapping } = this.state;

@@ -17,7 +17,7 @@ class MappingWizardDatastoresStep extends React.Component {
     preLoadingMappings: false
   };
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     const { clusterMappings, pristine } = this.props;
 
     const sourceClusters = clusterMappings.reduce(
@@ -58,7 +58,7 @@ class MappingWizardDatastoresStep extends React.Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     const { showAlertAction, isRejectedSourceDatastores, isRejectedTargetDatastores } = this.props;
 
     const { selectedCluster, selectedClusterMapping } = this.state;
